@@ -1,0 +1,73 @@
+{
+    "name": "aryeo/mcp",
+    "description": "Customizations and dynamic primitive registration for laravel/mcp",
+    "type": "library",
+    "require": {
+        "php": "^8.4",
+        "laravel/framework": "^12.36",
+        "laravel/mcp": "^0.9.0"
+    },
+    "require-dev": {
+        "aryeo/tooling-laravel": "0.0.*",
+        "brianium/paratest": "^7.14",
+        "orchestra/testbench": "^10.6",
+        "orchestra/testbench-core": "^10.7",
+        "phpunit/phpunit": "^12.5"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/AryeoHQ/tooling-laravel.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mcp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Justin Seliga",
+            "email": "justinsel@zillowgroup.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "aryeo/tooling-laravel": true
+        },
+        "preferred-install": {
+            "laravel/pint": "source"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mcp\\Provider"
+            ]
+        },
+        "tooling": {
+            "phpstan": {
+                "config": {
+                    "paths": ["src", "tests/Fixtures"]
+                }
+            },
+            "pint": {
+                "config": {
+                    "paths": ["src", "tests"]
+                }
+            },
+            "rector": {
+                "config": {
+                    "paths": ["src", "tests/Fixtures"]
+                }
+            }
+        }
+    }
+}
