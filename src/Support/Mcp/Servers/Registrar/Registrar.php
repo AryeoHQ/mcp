@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Mcp\Servers\Registrar;
+namespace Support\Mcp\Servers\Registrar;
 
 use InvalidArgumentException;
 use Laravel\Mcp\Server\Prompt;

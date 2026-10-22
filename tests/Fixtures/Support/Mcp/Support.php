@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Fixtures\Mcp;
+namespace Tests\Fixtures\Support\Mcp;
 
-use Mcp\Servers\Server;
+use Support\Mcp\Servers\Server;
 
 class Support extends Server
 {
