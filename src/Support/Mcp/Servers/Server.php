@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Mcp\Servers;
+namespace Support\Mcp\Servers;
 
 use Illuminate\Routing\Route;
 use Illuminate\Support\Str;
@@ -10,7 +10,7 @@ use Laravel\Mcp\Facades\Mcp;
 use Laravel\Mcp\Server\Prompt;
 use Laravel\Mcp\Server\Resource;
 use Laravel\Mcp\Server\Tool;
-use Mcp\Servers\Registrar\Registrar;
+use Support\Mcp\Servers\Registrar\Registrar;
 
 class Server extends \Laravel\Mcp\Server
 {

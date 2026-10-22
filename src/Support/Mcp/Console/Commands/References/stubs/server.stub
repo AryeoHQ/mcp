@@ -1,0 +1,13 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Laravel\Mcp\Server\Attributes\Name;
+use Support\Mcp\Servers\Server;
+
+#[Name('{{ serverDisplayName }}')]
+class {{ class }} extends Server
+{
+}

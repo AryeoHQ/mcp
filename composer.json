@@ -4,15 +4,18 @@
     "type": "library",
     "require": {
         "php": "^8.4",
-        "laravel/framework": "^12.36",
-        "laravel/mcp": "^0.9.0"
+        "aryeo/tooling-laravel": "0.0.41",
+        "laravel/framework": "^12.36 || ^13",
+        "laravel/mcp": "^1.1",
+        "nikic/php-parser": "^5.7",
+        "phpstan/phpstan": "^2.1",
+        "symfony/console": "^7.3 || ^8.0"
     },
     "require-dev": {
-        "aryeo/tooling-laravel": "0.0.*",
         "brianium/paratest": "^7.14",
-        "orchestra/testbench": "^10.6",
-        "orchestra/testbench-core": "^10.7",
-        "phpunit/phpunit": "^12.5"
+        "orchestra/testbench": "^10.6 || ^11",
+        "orchestra/testbench-core": "^10.7 || ^11",
+        "phpunit/phpunit": "^12.5 || ^13"
     },
     "repositories": [
         {
@@ -22,7 +25,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Mcp\\": "src/"
+            "Support\\Mcp\\": "src/Support/Mcp/",
+            "Tooling\\Mcp\\": "src/Tooling/Mcp/"
         }
     },
     "autoload-dev": {
@@ -49,24 +53,35 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mcp\\Provider"
+                "Support\\Mcp\\Providers\\Provider"
             ]
         },
         "tooling": {
             "phpstan": {
                 "config": {
-                    "paths": ["src", "tests/Fixtures"]
-                }
+                    "paths": [
+                        "src",
+                        "tests/Fixtures/Support"
+                    ]
+                },
+                "rules": "tooling/phpstan/rules.neon"
             },
             "pint": {
                 "config": {
-                    "paths": ["src", "tests"]
+                    "paths": [
+                        "src",
+                        "tests"
+                    ]
                 }
             },
             "rector": {
                 "config": {
-                    "paths": ["src", "tests/Fixtures"]
-                }
+                    "paths": [
+                        "src",
+                        "tests/Fixtures/Support"
+                    ]
+                },
+                "rules": "tooling/rector/rules.php"
             }
         }
     }

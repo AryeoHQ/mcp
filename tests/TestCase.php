@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use Mcp\Provider;
+use Support\Mcp\Providers\Provider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
+    protected $enablesPackageDiscoveries = true;
+
     /**
      * @return array<int, class-string>
      */

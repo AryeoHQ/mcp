@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Mcp\Servers;
+namespace Support\Mcp\Servers;
 
 use Laravel\Mcp\Facades\Mcp;
-use Mcp\Servers\Registrar\Registrar;
 use PHPUnit\Framework\Attributes\Test;
-use Tests\Fixtures\Mcp\DraftReply;
-use Tests\Fixtures\Mcp\KnowledgeBase;
-use Tests\Fixtures\Mcp\SearchTickets;
-use Tests\Fixtures\Mcp\Support;
+use Support\Mcp\Servers\Registrar\Registrar;
+use Tests\Fixtures\Support\Mcp\DraftReply;
+use Tests\Fixtures\Support\Mcp\KnowledgeBase;
+use Tests\Fixtures\Support\Mcp\SearchTickets;
+use Tests\Fixtures\Support\Mcp\Support;
 use Tests\TestCase;
 
 class ServerTest extends TestCase
@@ -42,9 +42,9 @@ class ServerTest extends TestCase
     {
         Support::add(SearchTickets::class, KnowledgeBase::class, DraftReply::class);
 
-        Support::tool(SearchTickets::class)->assertOk();
-        Support::resource(KnowledgeBase::class)->assertOk();
-        Support::prompt(DraftReply::class)->assertOk();
+        Support::tools()->assertRegistered(SearchTickets::class);
+        Support::resources()->assertRegistered(KnowledgeBase::class);
+        Support::prompts()->assertRegistered(DraftReply::class);
     }
 
     #[Test]
