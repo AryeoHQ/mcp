@@ -1,0 +1,9 @@
+services:
+    -
+        class: Tooling\Mcp\PhpStan\DisallowToolSearch
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tooling\Mcp\PhpStan\ServerMustExtendServer
+        tags:
+            - phpstan.rules.rule

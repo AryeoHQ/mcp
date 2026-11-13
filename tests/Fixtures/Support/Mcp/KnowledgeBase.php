@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Fixtures\Mcp;
+namespace Tests\Fixtures\Support\Mcp;
 
 use Laravel\Mcp\Request;
 use Laravel\Mcp\Response;
-use Laravel\Mcp\Server\Prompt;
+use Laravel\Mcp\Server\Resource;
 
-class DraftReply extends Prompt
+class KnowledgeBase extends Resource
 {
     public function handle(Request $request): Response
     {

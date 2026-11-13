@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Mcp\Servers\Registrar;
+namespace Support\Mcp\Servers\Registrar;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\Attributes\Test;
-use Tests\Fixtures\Mcp\SearchTickets;
-use Tests\Fixtures\Mcp\Support;
+use Tests\Fixtures\Support\Mcp\SearchTickets;
+use Tests\Fixtures\Support\Mcp\Support;
 use Tests\TestCase;
 
 class RegistrarTest extends TestCase

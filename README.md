@@ -12,7 +12,7 @@ build on.
 Extend the base `Server`:
 
 ```php
-use Mcp\Servers\Server;
+use Support\Mcp\Servers\Server;
 
 class Support extends Server
 {
@@ -44,3 +44,9 @@ Support::add(SearchTickets::class, KnowledgeBase::class, DraftReply::class);
 
 `add()` variadically accepts `laravel/mcp` `Tool`, `Resource`, or `Prompt` — as
 class-strings or instances.
+
+### ToolSearch
+
+Don't use laravel/mcp's `ToolSearch`. Grouping tools is the harness's job, and `ToolSearch`
+stops anyone from referencing a tool directly in chat, skills, or agent instructions.
+Running `tooling:phpstan` flags it for you.

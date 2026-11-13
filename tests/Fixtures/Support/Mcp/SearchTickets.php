@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Fixtures\Mcp;
+namespace Tests\Fixtures\Support\Mcp;
 
 use Laravel\Mcp\Request;
 use Laravel\Mcp\Response;
