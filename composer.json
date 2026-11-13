@@ -3,7 +3,7 @@
     "description": "Customizations and dynamic primitive registration for laravel/mcp",
     "type": "library",
     "require": {
-        "php": "^8.4",
+        "php": "^8.5",
         "aryeo/tooling-laravel": "0.0.43",
         "laravel/framework": "^12.36 || ^13",
         "laravel/mcp": "^1.1",
